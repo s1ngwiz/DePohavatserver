@@ -6,7 +6,7 @@ const cors = require("cors"); // Импортируем CORS
 const app = express();
 const PORT = 3000;
 
-app.use(cors()); // Используем CORS
+app.use(cors());
 app.use(express.json());
 
 app.get("/api/restaurant", async (req, res) => {

@@ -11,8 +11,7 @@ var cors = require("cors"); // Импортируем CORS
 
 var app = express();
 var PORT = 3000;
-app.use(cors()); // Используем CORS
-
+app.use(cors());
 app.use(express.json());
 app.get("/api/restaurant", function _callee(req, res) {
   var _req$query, cuisine, lat, lng, response, restaurants;
