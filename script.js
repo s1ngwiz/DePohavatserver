@@ -6,14 +6,16 @@ const cors = require("cors"); // Импортируем CORS
 const app = express();
 const PORT = 3000;
 
-app.use(cors());
+app.use(cors()); // Используем CORS
 app.use(express.json());
 
 app.get("/api/restaurant", async (req, res) => {
-    const { cuisine, lat, lng } = req.query;
+    const { cuisine } = req.query;
+    const lat = '54.6872'; // Широта Вильнюса
+    const lng = '25.2797'; // Долгота Вильнюса
 
-    if (!cuisine || !lat || !lng) {
-        return res.status(400).json({ error: "Необходимы параметры cuisine, lat и lng." });
+    if (!cuisine) {
+        return res.status(400).json({ error: "Необходим параметр cuisine." });
     }
 
     try {
