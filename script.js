@@ -1,10 +1,12 @@
 require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
+const cors = require("cors"); // Импортируем CORS
 
 const app = express();
 const PORT = 3000;
 
+app.use(cors()); // Используем CORS
 app.use(express.json());
 
 app.get("/api/restaurant", async (req, res) => {
