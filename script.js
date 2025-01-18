@@ -21,7 +21,7 @@ app.get("/api/restaurant", async (req, res) => {
     }
 
     try {
-        const response = await axios.get("https://nominatim.openstreetmap.org/search", {
+        const response = await axios.get("https://www.google.com/maps/search", {
             params: {
                 q: `${cuisine} restaurant`,
                 format: "json",

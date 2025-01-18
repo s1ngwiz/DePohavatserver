@@ -36,7 +36,7 @@ app.get("/api/restaurant", function _callee(req, res) {
         case 7:
           _context.prev = 7;
           _context.next = 10;
-          return regeneratorRuntime.awrap(axios.get("https://nominatim.openstreetmap.org/search", {
+          return regeneratorRuntime.awrap(axios.get("https://www.google.com/maps/search", {
             params: {
               q: "".concat(cuisine, " restaurant"),
               format: "json",
